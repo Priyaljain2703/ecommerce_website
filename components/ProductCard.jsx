@@ -2,8 +2,11 @@ import React from 'react';
 import { Star } from 'lucide-react';
 import Link from 'next/link';
 import "../src/app/globals.css"
+import { useCart } from '../context/CardContext'; 
 
-const ProductCard = ({ product, onAddToCart }) => {
+const ProductCard = ({ product}) => {
+    const { addToCart } = useCart();
+
   return (
     <div className="border-2 border-[#efefef] shadow-sm p-4 flex flex-col bg-white hover:shadow-lg transition w-full h-full rounded-lg">
      
@@ -37,7 +40,7 @@ const ProductCard = ({ product, onAddToCart }) => {
 
     
       <button
-        onClick={() => onAddToCart(product)}
+         onClick={() => addToCart(product)}
         className="mt-auto bg-[#025CB1] text-white px-4 py-2 rounded cursor-pointer transition"
       >
         Add to Cart

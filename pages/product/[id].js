@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { products } from '../../lib/products';
 import { ArrowLeft } from 'lucide-react';
-
+import { useCart } from '../../context/CardContext';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import "../../src/app/globals.css"
@@ -12,7 +12,7 @@ import "../../src/app/globals.css"
 const ProductDetail = () => {
   const router = useRouter();
   const { id } = router.query;
-
+  const { addToCart } = useCart();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
@@ -22,6 +22,11 @@ const ProductDetail = () => {
       setProduct(selected);
     }
   }, [id]);
+
+   const handleAddToCart = () => {
+    addToCart(product, quantity);
+    
+  };
 
   if (!product) return <p className="p-10">Loading...</p>;
 
@@ -72,7 +77,7 @@ const ProductDetail = () => {
 
             {/* Add to Cart Button */}
             <button
-              onClick={() => console.log('Add to Cart', product, quantity)}
+               onClick={handleAddToCart}
               className="mt-6 bg-[#025CB1] hover:bg-blue-700 text-white px-6 py-2 rounded-md transition"
             >
               Add to Cart
