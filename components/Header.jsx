@@ -4,7 +4,7 @@ import { Search, ShoppingCart, UserCircle } from 'lucide-react';
 
 const Header = ({ searchQuery, setSearchQuery }) => {
   return (
-    <header className="bg-[#025CB1] text-white px-6 py-4 flex items-center justify-between">
+    <header className="bg-[#024c92] text-white px-6 py-4 flex items-center justify-between">
       <div className="text-2xl font-bold">Logo</div>
 
       <div className="flex justify-center relative w-full max-w-md">

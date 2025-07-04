@@ -80,7 +80,7 @@ const Home = () => {
       <main className="flex-1 py-8 px-10 bg-white">
       
 
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col md:flex-row gap-5">
           <SideBar
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
