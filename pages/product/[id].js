@@ -137,7 +137,7 @@ const ProductDetail = () => {
               Add to Cart
             </button>
 
-            <div className="mt-8">
+            <div className="mt-8 text-[#000]">
               <h2 className="text-xl font-semibold mb-2 text-[#000]">Reviews</h2>
               {product.reviews.length > 0 ? (
                 <ul className="space-y-4">
