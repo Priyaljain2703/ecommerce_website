@@ -53,8 +53,8 @@ const CardPage = () => {
                     <div>
                       <h2 className="text-md font-medium text-gray-800">{item.title}</h2>
                       <p className="text-sm text-gray-600">₹{item.price.toFixed(2)}</p>
-                      <div className="flex items-center mt-2 gap-2">
-                        <label className="text-sm text-[#000]">Qty:</label>
+                      <div className="flex items-center mt-2 gap-2 text-black">
+                        <label className="text-sm text-[#000] ">Qty:</label>
                         <input
                           type="number"
                           min="1"
@@ -62,7 +62,7 @@ const CardPage = () => {
                           onChange={(e) =>
                             updateQuantity(item.id, parseInt(e.target.value) || 1)
                           }
-                          className="w-16 border px-2 py-1 text-center rounded-md text-sm"
+                          className="w-16 border  border-black px-2 py-1 text-center rounded-md text-sm"
                         />
                       </div>
                     </div>

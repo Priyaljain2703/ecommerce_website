@@ -80,13 +80,13 @@ const ProductDetail = () => {
                         onClick={handlePrevImage}
                         className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-1 shadow-md hover:bg-gray-100"
                       >
-                        <ChevronLeft size={20} />
+                        <ChevronLeft size={20} className='text-black' />
                       </button>
                       <button
                         onClick={handleNextImage}
                         className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-1 shadow-md hover:bg-gray-100"
                       >
-                        <ChevronRight size={20} />
+                        <ChevronRight size={20} className='text-black' />
                       </button>
                     </>
                   )}
@@ -118,14 +118,14 @@ const ProductDetail = () => {
             </p>
 
             
-            <div className="flex items-center gap-2 mt-4">
-              <label className="text-sm font-medium">Quantity:</label>
+            <div className="flex items-center gap-2 mt-4 text-[#000]">
+              <label className="text-sm font-medium text-[#000] ">Quantity:</label>
               <input
                 type="number"
                 min="1"
                 value={quantity}
                 onChange={(e) => setQuantity(Number(e.target.value))}
-                className="w-20 px-2 py-1 border rounded-md"
+                className="w-20 px-2 py-1 border rounded-md text-[#000] border-black"
               />
             </div>
 
@@ -138,7 +138,7 @@ const ProductDetail = () => {
             </button>
 
             <div className="mt-8">
-              <h2 className="text-xl font-semibold mb-2">Reviews</h2>
+              <h2 className="text-xl font-semibold mb-2 text-[#000]">Reviews</h2>
               {product.reviews.length > 0 ? (
                 <ul className="space-y-4">
                   {product.reviews.map((review, index) => (
