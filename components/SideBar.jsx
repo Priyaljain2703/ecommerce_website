@@ -18,10 +18,10 @@ const SideBar = ({ selectedCategories, setSelectedCategories, priceRange, setPri
   return (
     <div className="w-full md:w-1/4 lg:w-1/5 bg-[#fbfbfb] overflow-y-auto p-4 rounded-md shadow-md border-2 border-[#ecebeb] mr-8 h-100" >
       <div className="mb-6">
-        <h2 className="text-lg font-semibold mb-2">Category</h2>
+        <h2 className="text-lg font-semibold mb-2 text-[#000]">Category</h2>
         <div className="flex flex-col gap-2">
           {categories.map((cat) => (
-            <label key={cat} className="inline-flex items-center">
+            <label key={cat} className="inline-flex items-center text-[#000]">
               <input
                 type="checkbox"
                 value={cat}
@@ -36,7 +36,7 @@ const SideBar = ({ selectedCategories, setSelectedCategories, priceRange, setPri
       </div>
 
       <div className="mb-6">
-        <h2 className="text-lg font-semibold mb-2">Price Range</h2>
+        <h2 className="text-lg font-semibold mb-2 text-[#000]">Price Range</h2>
         <input
           type="range"
           min="0"

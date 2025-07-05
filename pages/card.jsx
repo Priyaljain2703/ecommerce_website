@@ -54,7 +54,7 @@ const CardPage = () => {
                       <h2 className="text-md font-medium text-gray-800">{item.title}</h2>
                       <p className="text-sm text-gray-600">₹{item.price.toFixed(2)}</p>
                       <div className="flex items-center mt-2 gap-2">
-                        <label className="text-sm text-gray-600">Qty:</label>
+                        <label className="text-sm text-[#000]">Qty:</label>
                         <input
                           type="number"
                           min="1"

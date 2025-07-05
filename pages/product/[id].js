@@ -47,7 +47,7 @@ const ProductDetail = () => {
   if (!product) return <p className="p-10">Loading...</p>;
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col bg-[#fff] text-[#fff]">
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       <main className="flex-1 px-20 py-10 ">
